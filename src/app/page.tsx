@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import * as m from "@/paraglide/messages";
 import { ChevronRight } from "lucide-react"
-import { cn } from "@/lib/utils"
 
 export default function Home() {
   const words = [m.inspire(), m.innovate(), m.create(), m.code(), m.collab()];
