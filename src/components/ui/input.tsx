@@ -1,6 +1,15 @@
-const TextInput = (props: { label: any; name: any; value: any; onChange: any; className: any; placeholder: any; password: any; }) => {
-  const { label, name, value, onChange, className, placeholder, password } =
-    props;
+interface TextInputProps {
+  label: string;
+  name: string;
+  value: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  className?: string;
+  placeholder?: string;
+  password?: boolean;
+}
+
+const TextInput: React.FC<TextInputProps> = (props) => {
+  const { label, name, value, onChange, className, placeholder, password } = props;
 
   return (
     <div className={`flex flex-col space-y-1 ${className}`}>
