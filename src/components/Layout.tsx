@@ -132,7 +132,7 @@ const Footer = () => {
                 <div className="flex flex-col items-center md:items-start">
                     <span className="text-lg font-bold uppercase">
                         © {new Date().getFullYear()}{" "}
-                        <a href="https://coinbase.com" className="hover:underline">
+                        <a href="https://chilangohacks.co" className="hover:underline">
                             chilangohacks
                         </a>
                     </span>

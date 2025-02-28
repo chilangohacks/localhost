@@ -143,7 +143,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="sponsors" className="min-h-screen py-24 flex flex-col items-center">
+      <section id="sponsors" className="relative px-4 min-h-screen px-36 py-24 flex flex-col items-center justify-center">
         <h2 className="text-4xl md:text-6xl text-accent font-bold text-center">
           {m.sponsors_extended()}
         </h2>
@@ -160,15 +160,15 @@ export default function Home() {
           <Button variant="donate" size="xl">{m.sponsor()}</Button>
         </div>
       </section>
-      <section id="about" className="bg-container w-full h-screen relative">
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+      <section id="about" className="bg-gradient-to-t from-black via-[#00001f] to-[#003468] w-full h-screen">
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
           <h2 className="text-4xl md:text-6xl text-accent font-bold">
             {m.about()} ChilangoHacks
           </h2>
-          <p className="mt-4 text-xl max-w-4xl mx-auto text-balance">
+          <p className="mt-4 text-xl max-w-4xl mx-auto">
             {m.about_description()}
           </p>
-          <p className="mt-6 text-xl max-w-4xl mx-auto text-balance">
+          <p className="mt-6 text-xl max-w-4xl mx-auto">
             {m.about_second_paragraph()}
           </p>
         </div>
