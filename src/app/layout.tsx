@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <LanguageProvider>
       <html lang={languageTag()}>
-        <body className={`${fraunces.variable} ${nunito.className} antialiased flex flex-col min-h-screen w-full overflow-x-hidden`}>
+        <body className={`${fraunces.variable} ${nunito.className} antialiased flex flex-col min-h-screen w-full`}>
           {/*   <a id="mlh-trust-badge" style={{
             display: "block",
             maxWidth: "100px",
@@ -37,7 +37,7 @@ export default function RootLayout({
               src="https://s3.amazonaws.com/logged-assets/trust-badge/2025/mlh-trust-badge-2025-white.svg" alt="Major League Hacking 2025 Hackathon Season" style={{ width: "100%" }} />
           </a> */}
           <Header />
-          <main className="flex-grow mt-0 px-0 bottom-0 overflow-x-hidden">
+          <main className="flex-grow mt-0 px-0 bottom-0">
             {children}
           </main>
           <Footer />

@@ -72,16 +72,18 @@ export default function Home() {
           <h2>
             <span className="text-2xl font-bold">{m.donate_desc()}</span>
           </h2>
-          <motion.h1
-            key={index}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.6 }}
-            className="text-6xl font-bold text-center fancy italic mt-2"
-          >
-            {words[index].toLocaleLowerCase()}
-          </motion.h1>
+          <div className="h-16">
+            <motion.h1
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -30 }}
+              transition={{ duration: 0.6 }}
+              className="text-6xl font-bold text-center fancy italic mt-2"
+            >
+              {words[index].toLocaleLowerCase()}
+            </motion.h1>
+          </div>
         </div>
         <div className="w-full mt-8 flex flex-col items-center space-y-4 text-md">
           <Button variant="donate" size="xl">$ {m.donate()}</Button>
@@ -122,7 +124,7 @@ export default function Home() {
             {!isMobile && (
               <div className="w-full md:w-1/2">
                 {activeIndex !== null && faqData[activeIndex] && (
-                  <div className="sticky top-24">
+                  <div className="top-24">
                     <h3 className="text-[1.5rem] font-bold text-[#0A2463] mb-6">{faqData[activeIndex].question}</h3>
                     <p className="text-gray-700 text-[1rem]">{faqData[activeIndex].answer}</p>
                   </div>
@@ -159,7 +161,7 @@ export default function Home() {
           <Button variant="donate" size="xl">{m.sponsor()}</Button>
         </div>
       </section>
-      <section id="about" className="bg-gradient-to-t from-black via-[#00001f] to-[#003468] w-full h-screen">
+      <section id="about" className="bg-gradient-to-t from-black via-[#00001f] to-[#003468] w-full min-h-screen">
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
           <h2 className="text-4xl md:text-6xl text-accent font-bold">
             {m.about()} ChilangoHacks

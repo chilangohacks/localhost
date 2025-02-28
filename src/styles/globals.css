@@ -8,23 +8,24 @@
 }
 
 .bg-img-container {
-  background: url("/silueta.png"),
+  background: url("/silueta.svg"),
     linear-gradient(90deg, #5cb8ff 0%, #297bd9 100%);
   background-attachment: fixed;
   background-size: auto;
   background-repeat: no-repeat;
 }
 
-@media (max-width: 920px) {
-  .bg-container {
-    background-size: auto 50%;
+@media (min-width: 1920px) {
+  .bg-img-container {
+    background-size: cover;
+    background-position: bottom;
   }
-}
-
-body {
-  @apply !min-w-full;
 }
 
 .fancy {
   font-family: var(--font-fraunces);
+}
+
+html, body {
+  touch-action: auto;
 }

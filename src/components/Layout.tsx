@@ -125,7 +125,7 @@ const Header = () => {
 const Footer = () => {
     return (
         <footer
-            className="bg-black text-white z-50"
+            className="bg-black text-white z-50 pt-8"
             style={{ minHeight: "250px" }}
         >
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
