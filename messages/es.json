@@ -1,0 +1,75 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+
+  "home": "Inicio",
+  "donate": "Donar",
+  "sponsors": "Patrocinadores",
+  "about": "Acerca de",
+
+  "donate_noun": "Donaciones",
+  "donate_desc": "Tu donación nos ayuda a seguir empoderando a la juventud y apoyar a la generación que",
+
+  "faq_extended": "Preguntas Frecuentes",
+  "sponsors_extended": "Nuestros grandes patrocinadores",
+
+  "inspire": "Inspira",
+  "innovate": "Innova",
+  "create": "Crea",
+  "code": "Programa",
+  "collab": "Colabora",
+
+  "sponsor": "Patrocinar",
+
+  "business": "¿Eres una empresa?",
+
+  "location": "H. Congreso de la Unión, CDMX",
+
+  "title": "ChilangoHacks - El Mejor Hackathon en CDMX",
+  "description": "¡Únete al hackathon más emocionante de la Ciudad de México! Colabora, innova y crea proyectos increíbles.",
+  "hero_cta": "Regístrate",
+  "hero_subtitle": "Un maratón de codificación de 24 horas en el corazón de la Ciudad de México.",
+  "about_title": "Sobre ChilangoHacks",
+  "about_description": "ChilangoHacks es un hackathon de 36 horas donde desarrolladores, diseñadores y emprendedores se unen para construir soluciones innovadoras.",
+  "about_second_paragraph": "En Chilangohacks, buscamos crear un ambiente inclusivo donde los jóvenes hackers puedan crecer, hacer networking y colaborar en desafíos del mundo real. Ya sea que seas un desarrollador, diseñador o emprendedor aspirante, este es el lugar perfecto para perfeccionar tus habilidades, encontrar tu comunidad y marcar la diferencia. Creemos que con creatividad, determinación y las herramientas adecuadas, todo es posible. Únete a nosotros mientras empoderamos a los jóvenes hackers en la Ciudad de México y más allá para crear soluciones innovadoras que moldeen el futuro.",
+  "sponsors_title": "Nuestros Patrocinadores",
+  "sponsors_description": "Nos enorgullece contar con el apoyo de increíbles empresas que creen en la innovación y la tecnología.",
+  "faq_title": "Preguntas Frecuentes",
+
+  "what_is_a_hackathon": "¿Qué es un hackathon?",
+  "what_is_a_hackathon_answer": "Un hackathon es un evento donde diseñadores, programadores, ingenieros y entusiastas de la tecnología se reúnen para crear algo dentro de un límite de tiempo.",
+
+  "how_do_i_become_a_sponsor": "¿Cómo puedo ser patrocinador?",
+  "how_do_i_become_a_sponsor_answer": "Patrocinar es una excelente manera de hacer crecer tu negocio e inspirar a los jóvenes del futuro. Si estás interesado en patrocinar, envía un correo a nuestro email de negocios.",
+
+  "who_can_participate": "¿Quién puede participar?",
+  "who_can_participate_answer": "Estudiantes de cualquier edad y de cualquier parte del mundo son bienvenidos a participar en ChilangoHacks. Estamos orientando este hackathon especialmente a estudiantes de bachillerato y licenciatura.",
+
+  "is_chilangohacks_in_person": "¿ChilangoHacks es un hackathon presencial?",
+  "is_chilangohacks_in_person_answer": "¡Sí! ChilangoHacks se llevará a cabo en persona en el H. Congreso de la Unión en la Ciudad de México.",
+
+  "how_much_does_it_cost": "¿Cuánto cuesta asistir a ChilangoHacks?",
+  "how_much_does_it_cost_answer": "ChilangoHacks es completamente gratuito. No cobraremos ninguna tarifa por participar en ChilangoHacks.",
+
+  "how_can_i_find_a_team": "¿Cómo puedo encontrar un equipo para ChilangoHacks?",
+  "how_can_i_find_a_team_answer": "Podrás encontrar un equipo en el servidor de Discord de ChilangoHacks antes de que comience el evento o elegir trabajar por tu cuenta.",
+
+  "what_if_i_dont_know_how_to_code": "¿Qué pasa si no sé programar?",
+  "what_if_i_dont_know_how_to_code_answer": "¡No hay problema! Los hackathones no son solo sobre programación. También hay aspectos de negocios, diseño y presentación. Además, puedes asistir a talleres y escuchar a oradores invitados hablar sobre el mundo de la tecnología.",
+
+  "can_i_participate_if_im_underage": "¿Puedo participar si soy menor de edad?",
+  "can_i_participate_if_im_underage_answer": "Sí, pero tus padres deberán firmar una exención de responsabilidad.",
+
+  "what_project_should_i_make": "¿Qué proyecto debo hacer?",
+  "what_project_should_i_make_answer": "¡Puedes hacer cualquier tipo de proyecto que desees! Una app, un sitio web, blockchain, hardware, diseño, o cualquier cosa que se te ocurra.",
+
+  "select": "Selecciona una pregunta para ver la respuesta",
+
+  "still_have_questions": "¿Todavía tienes preguntas? ¡Contáctanos!",
+
+  "schedule_title": "Programa",
+  "day_1": "Día 1 - Ceremonia de Apertura y Comienzo del Hacking",
+  "day_2": "Día 2 - Entrega de Proyectos y Ceremonia de Clausura",
+  "contact_title": "Contáctanos",
+
+  "footer_text": "Hecho con ❤️ en México 🇲🇽"
+}
