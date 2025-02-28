@@ -1,4 +1,4 @@
-const TextInput = (props) => {
+const TextInput = (props: { label: any; name: any; value: any; onChange: any; className: any; placeholder: any; password: any; }) => {
   const { label, name, value, onChange, className, placeholder, password } =
     props;
 
