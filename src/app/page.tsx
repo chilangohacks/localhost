@@ -56,7 +56,7 @@ export default function Home() {
         <div className="h-full flex flex-col md:items-center justify-center">
           <div className="text-white text-center max-w-screen-md mx-auto px-4">
             <h1 className="text-5xl md:text-8xl font-bold">chilangohacks</h1>
-            <p className="text-lg md:text-xl mt-4 text-balance">📅 Oct. 31 - Nov. 1 @ 📍{m.location()}</p>
+            <p className="text-lg md:text-xl mt-4 text-balance">📅 Aug. 30 - 31 @ 📍{m.location()}</p>
           </div>
           <div className="w-full mx-auto px-4 flex flex-row items-center justify-center mt-8 space-x-4 text-xl">
             <Button size="lg">{m.hero_cta()}</Button>
