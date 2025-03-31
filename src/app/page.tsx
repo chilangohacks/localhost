@@ -56,11 +56,13 @@ export default function Home() {
         <div className="h-full flex flex-col md:items-center justify-center">
           <div className="text-white text-center max-w-screen-md mx-auto px-4">
             <h1 className="text-5xl md:text-8xl font-bold">chilangohacks</h1>
-            <p className="text-lg md:text-xl mt-4 text-balance">📅 Aug. 30 - 31 @ 📍{m.location()}</p>
+            <p className="text-lg md:text-xl mt-4 text-balance">📅 {m.month()} 30 - 31 @ 📍{m.location()}</p>
           </div>
           <div className="w-full mx-auto px-4 flex flex-row items-center justify-center mt-8 space-x-4 text-xl">
             <Button size="lg">{m.hero_cta()}</Button>
-            <Button variant="secondary" size="lg">{m.donate()} 💖</Button>
+            <a href="https://gofund.me/27f7be92" target="_blank" rel="noopener noreferrer">
+              <Button variant="secondary" size="lg">{m.donate()} 💖</Button>
+            </a>
           </div>
         </div>
       </section>
@@ -86,11 +88,15 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full mt-8 flex flex-col items-center space-y-4 text-md">
-          <Button variant="donate" size="xl">$ {m.donate()}</Button>
+          <a href="https://gofund.me/27f7be92" target="_blank" rel="noopener noreferrer">
+            <Button variant="donate" size="xl">$ {m.donate()}</Button>
+          </a>
           <span>
             {m.business()}
           </span>
-          <Button variant="secondary" size="xl">{m.sponsor()}</Button>
+          <a href="#sponsors">
+            <Button variant="secondary" size="xl">{m.sponsor()}</Button>
+          </a>
         </div>
       </section>
       <section className="bg-white text-black py-24" id="faq">
@@ -135,9 +141,9 @@ export default function Home() {
 
           <div className="mt-16 text-center">
             <p className="text-gray-600">
-              Still have questions? Feel free to{" "}
+              {m.still_have_questions()}{" "}
               <a href="#contact" className="text-[#0A2463] font-medium hover:underline">
-                contact us
+                {m.contact_us()}
               </a>
               .
             </p>

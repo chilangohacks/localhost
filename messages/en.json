@@ -22,6 +22,7 @@
 
   "business": "Are you a business?",
 
+  "month": "Aug.",
   "location": "H. Congress of the Union, Mexico City",
 
   "title": "ChilangoHacks - The Ultimate Hackathon in CDMX",
@@ -64,7 +65,8 @@
 
   "select": "Select a question to view the answer",
 
-  "still_have_questions": "Still have questions? Contact us!",
+  "still_have_questions": "Still have questions? Feel free to",
+  "contact_us": "contact us",
 
   "schedule_title": "Schedule",
   "day_1": "Day 1 - Opening Ceremony & Hacking Begins",

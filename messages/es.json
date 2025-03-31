@@ -22,7 +22,8 @@
 
   "business": "¿Eres una empresa?",
 
-  "location": "H. Congreso de la Unión, CDMX",
+  "month": "Agosto",
+  "location": "H. Cámara de Diputados, CDMX",
 
   "title": "ChilangoHacks - El Mejor Hackathon en CDMX",
   "description": "¡Únete al hackathon más emocionante de la Ciudad de México! Colabora, innova y crea proyectos increíbles.",
@@ -64,7 +65,8 @@
 
   "select": "Selecciona una pregunta para ver la respuesta",
 
-  "still_have_questions": "¿Todavía tienes preguntas? ¡Contáctanos!",
+  "still_have_questions": "¿Todavía tienes preguntas? No dudes en",
+  "contact_us": "contactarnos",
 
   "schedule_title": "Programa",
   "day_1": "Día 1 - Ceremonia de Apertura y Comienzo del Hacking",
