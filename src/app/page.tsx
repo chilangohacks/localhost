@@ -6,13 +6,33 @@ import { Button } from "@/components/ui/button";
 import * as m from "@/paraglide/messages";
 import { ChevronRight } from "lucide-react"
 
+import { LuGithub, LuLinkedin, LuInstagram } from "react-icons/lu";
+
+type TeamMember = {
+  name?: string;
+  role?: string;
+  social?: {
+    github?: string;
+    linkedin?: string;
+    instagram?: string;
+  };
+};
+
+type TeamMembers = {
+  [key: string]: TeamMember;
+};
+
 export default function Home() {
   const words = [m.inspire(), m.innovate(), m.create(), m.code(), m.collab()];
   const [index, setIndex] = useState(0);
 
+  const [hoveredMember, setHoveredMember] = useState<string | null>(null)
+
   const [activeIndex, setActiveIndex] = useState<number | null>(0)
   const [isMobile, setIsMobile] = useState(false)
   const [faqData, setFaqData] = useState<{ question: string, answer: string }[]>([])
+
+  const [teamData, setTeamData] = useState<TeamMembers>({})
 
   const toggleQuestion = (index: number) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index))
@@ -31,7 +51,66 @@ export default function Home() {
       { question: m.what_project_should_i_make(), answer: m.what_project_should_i_make_answer() },
     ]
 
+
+    const fetchedTeam: TeamMembers = {
+      ulises: {
+        name: "Ulises Viña",
+        role: m.ulises_role(),
+        social: {
+          instagram: "https://www.instagram.com/ulisesvina/",
+          linkedin: "https://www.linkedin.com/in/ulisesvina/",
+          github: "https://github.com/ulisesvina",
+        },
+      },
+      juan: {
+        name: "Juan Almanza",
+        role: m.juan_role(),
+        social: {
+          linkedin: "https://www.linkedin.com/in/scidroid/",
+          github: "https://github.com/scidroid",
+          instagram: "https://www.instagram.com/scidroid/",
+        }
+      },
+      sebastian: {
+        name: "Sebastian Ponce",
+        role: m.sebastian_role(),
+        social: {
+          github: "https://github.com/sebaspv",
+          linkedin: "https://www.linkedin.com/in/sebaspv/"
+        }
+      },
+      jafit: {
+        name: "Carol Jafit",
+        role: m.jafit_role(),
+      },
+      elohim: {
+        name: "Elohim Hernández",
+        role: m.elohim_role(),
+      },
+      bruno: {
+        name: "Bruno Ramírez",
+        role: m.bruno_role(),
+        social: {
+          instagram: "https://www.instagram.com/brunooosf/"
+        }
+      },
+      ivan: {
+        name: "Ivan Espinola",
+        role: m.ivan_role(),
+      },
+      mariana: {
+        name: "Mariana Garza",
+        role: m.mariana_role(),
+        social: {
+          instagram: "https://www.instagram.com/astrolemonma.r/",
+          linkedin: "https://www.linkedin.com/in/garza-cedillo/",
+          github: "https://github.com/astrolemonmarafk",
+        }
+      },
+    }
+
     setFaqData(fetchedFAQ)
+    setTeamData(fetchedTeam)
 
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 768)
@@ -147,6 +226,76 @@ export default function Home() {
               </a>
               .
             </p>
+          </div>
+        </div>
+      </section>
+      <section
+        id="team"
+        className="relative py-24 px-4 md:px-8 lg:px-12"
+      >
+
+        <div className="relative max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-accent">
+              {m.our_team()}
+            </h2>
+            <p className="mt-4 text-lg max-w-2xl mx-auto">{m.team_desc()}</p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+            {["ulises", "mariana", "sebastian", "jafit", "juan", "ivan", "elohim", "bruno"].map((member, i) => (
+              <motion.div
+                key={i}
+                className="group"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                onMouseEnter={() => setHoveredMember(member)}
+                onMouseLeave={() => setHoveredMember(null)}
+              >
+                <div className="relative overflow-hidden rounded-xl bg-white dark:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-blue-500"></div>
+
+                  <div className="relative pt-6 px-6 flex-grow">
+                    <div className="relative mx-auto w-32 h-32 mb-4 overflow-hidden rounded-full border-4 border-white dark:border-slate-700 shadow-md group-hover:scale-105 transition-transform duration-300">
+                      <img
+                        src={`/team/${member}.png`}
+                        alt={teamData[member]?.name || member}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    <div className="text-center pb-6">
+                      <h3 className="text-xl font-bold text-slate-800 transition-colors">
+                        {teamData[member]?.name || member}
+                      </h3>
+                      <p className="mt-1 text-sm font-medium text-secondary">
+                        {teamData[member]?.role || "Team Member"}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-center gap-5 py-2 border-t border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80">
+                    {teamData[member]?.social?.github && (
+                      <a href={teamData[member]?.social?.github} target="_blank" rel="noopener noreferrer">
+                        <LuGithub className="w-6 h-6 text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors" />
+                      </a>
+                    )}
+                    {teamData[member]?.social?.linkedin && (
+                      <a href={teamData[member]?.social?.linkedin} target="_blank" rel="noopener noreferrer">
+                        <LuLinkedin className="w-6 h-6 text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors" />
+                      </a>
+                    )}
+                    {teamData[member]?.social?.instagram && (
+                      <a href={teamData[member]?.social?.instagram} target="_blank" rel="noopener noreferrer">
+                        <LuInstagram className="w-6 h-6 text-slate-600 dark:text-slate-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors" />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
