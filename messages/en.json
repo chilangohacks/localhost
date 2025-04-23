@@ -1,30 +1,22 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-
   "home": "Home",
   "donate": "Donate",
   "sponsors": "Sponsors",
   "about": "About",
-
   "donate_noun": "Donations",
   "donate_desc": "With your donation, we can continue to empower the youth and support the generation that",
-
   "faq_extended": "Frequently Asked Questions",
   "sponsors_extended": "Our amazing sponsors",
-
   "inspire": "Inspires",
   "innovate": "Innovates",
   "create": "Creates",
   "code": "Codes",
   "collab": "Collabs",
-
   "sponsor": "Sponsor",
-
   "business": "Are you a business?",
-
   "month": "Aug.",
   "location": "H. Congress of the Union, Mexico City",
-
   "title": "ChilangoHacks - The Ultimate Hackathon in CDMX",
   "description": "Join the most exciting hackathon in Mexico City! Collaborate, innovate, and create amazing projects.",
   "hero_cta": "Register Now",
@@ -35,48 +27,34 @@
   "sponsors_title": "Our Sponsors",
   "sponsors_description": "We are proud to be supported by amazing companies that believe in innovation and technology.",
   "faq_title": "Frequently Asked Questions",
-
   "what_is_a_hackathon": "What is a hackathon?",
   "what_is_a_hackathon_answer": "A hackathon is an event where designers, programmers, engineers, and tech enthusiasts gather to create something within a given time limit.",
-
   "how_do_i_become_a_sponsor": "How do I become a sponsor?",
   "how_do_i_become_a_sponsor_answer": "Sponsoring is a great way to grow your business and inspire the youth of the future. If you're interested in sponsoring, email our business email.",
-
   "who_can_participate": "Who can participate?",
   "who_can_participate_answer": "Students of any age from any part of the world are welcome to participate in ChilangoHacks. We are aiming for this to be a hackathon targeted toward high school and university students.",
-
   "is_chilangohacks_in_person": "Is ChilangoHacks an in-person hackathon?",
   "is_chilangohacks_in_person_answer": "Yes! ChilangoHacks will be held in person at the H. Congress of the Union in Mexico City.",
-
   "how_much_does_it_cost": "How much does it cost to attend ChilangoHacks?",
   "how_much_does_it_cost_answer": "ChilangoHacks is completely free to attend. We will not be charging any fees to attend ChilangoHacks.",
-
   "how_can_i_find_a_team": "How can I find a team for ChilangoHacks?",
   "how_can_i_find_a_team_answer": "You will be able to find a team in the ChilangoHacks Discord before the event starts, or choose to work by yourself.",
-
   "what_if_i_dont_know_how_to_code": "What if I don't know how to code?",
   "what_if_i_dont_know_how_to_code_answer": "It's okay! Hackathons aren't just about coding. There is also an aspect of business, design, and presentation. You can also attend workshops and listen to guest speakers talk about the world of tech.",
-
   "can_i_participate_if_im_underage": "Can I come if I'm a underage?",
   "can_i_participate_if_im_underage_answer": "Yes, but your parents will be required to sign a waiver.",
-
   "what_project_should_i_make": "What project should I make?",
   "what_project_should_i_make_answer": "You can make any type of project you would like! An app, a website, blockchain, hardware, design, or anything that your heart desires.",
-
   "select": "Select a question to view the answer",
-
   "still_have_questions": "Still have questions? Feel free to",
   "contact_us": "contact us",
-
   "schedule_title": "Schedule",
   "day_1": "Day 1 - Opening Ceremony & Hacking Begins",
   "day_2": "Day 2 - Project Submission & Closing Ceremony",
   "contact_title": "Contact Us",
   "contact_description": "Have questions? Reach out to us at support@chilangohacks.co",
-
   "our_team": "Our Team",
   "team_desc": "We are a group of passionate individuals dedicated to making this hackathon a success. Meet the team behind ChilangoHacks.",
-
   "ulises_role": "Co-Founder & Organizer",
   "juan_role": "Ambassador in Colombia",
   "sebastian_role": "Ambassador in Puebla & Director of AI Innovation",
@@ -85,6 +63,5 @@
   "bruno_role": "Ambassador in University",
   "ivan_role": "Ambassador in Middle School, Spokesperson & Logistics Executive",
   "mariana_role": "Co-Founder, Member of the Inclusion Committee & Organizer",
-
   "footer_text": "Made with ❤️ in Mexico 🇲🇽"
 }

@@ -20,6 +20,19 @@ export default function RootLayout({
   return (
     <LanguageProvider>
       <html lang={languageTag()}>
+        <head>
+          <meta property="og:title" content="ChilangoHacks" />
+          <meta property="og:description" content="Mexico City's first student hackathon" />
+          <meta property="og:image" content="https://chilangohacks.co/silueta.jpeg" />
+          <meta property="og:url" content="https://chilangohacks.co" />
+          <meta property="og:type" content="website" />
+
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="ChilangoHacks" />
+          <meta name="twitter:site" content="@chilangohacks" />
+          <meta name="twitter:description" content="Mexico City's first student hackathon" />
+          <meta name="twitter:image" content="https://chilangohacks.co/silueta.jpeg" />
+        </head>
         <body className={`${fraunces.variable} ${nunito.className} antialiased flex flex-col min-h-screen w-full`}>
           {/*   <a id="mlh-trust-badge" style={{
             display: "block",
