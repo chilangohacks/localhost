@@ -128,18 +128,31 @@ export default function Home() {
   return (
     <main className="relative">
       <section id="home" className="bg-img-container w-[100vw] h-screen ml-[calc(-50vw+50%)] mr-[calc(-50vw+50%)]">
-        <div className="h-full flex flex-col md:items-center justify-center">
-          <div className="text-white text-center max-w-screen-md mx-auto px-4">
-            <h1 className="text-5xl md:text-8xl font-bold">chilangohacks</h1>
-            <p className="text-lg md:text-xl mt-4 text-balance">📅 {m.month()} 30 - 31 @ 📍{m.location()}</p>
+        <div className="h-full flex flex-col items-center justify-center px-4">
+          {/* Title and Subtitle */}
+          <div className="text-white text-center max-w-3xl">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-bold">
+              chilangohacks
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl mt-4 text-balance">
+              📅 {m.month()} 30 - 31 @ 📍{m.location()}
+            </p>
           </div>
-          <div className="w-full mx-auto px-4 flex flex-row items-center justify-center mt-8 space-x-4 text-xl">
-            <Button size="lg">{m.hero_cta()}</Button>
-            <a href="https://gofund.me/27f7be92" target="_blank" rel="noopener noreferrer">
-              <Button variant="secondary" size="lg">{m.donate()} 💖</Button>
+
+          {/* Button Group */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 text-lg sm:text-xl">
+            <Button className="md:w-auto w-full" size="lg">{m.hero_cta()}</Button>
+
+            <a href="https://gofund.me/27f7be92" className="md:w-auto w-full" target="_blank" rel="noopener noreferrer">
+              <Button className="w-full" variant="secondary" size="lg">
+                {m.donate()} 💖
+              </Button>
             </a>
+
             <a href="/pdf/convocatoria.pdf" target="_blank" rel="noopener noreferrer">
-              <Button variant="secondary" size="lg">{m.call()} 📄</Button>
+              <Button className="md:w-auto w-full" variant="secondary" size="lg">
+                {m.call()} 📄
+              </Button>
             </a>
           </div>
         </div>
