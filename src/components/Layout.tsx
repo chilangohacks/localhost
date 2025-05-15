@@ -14,6 +14,7 @@ const Header = () => {
         { title: "Home", href: "#home", id: "home" },
         { title: "Donate", href: "#donate", id: "donate" },
         { title: "FAQ", href: "#faq", id: "faq" },
+        { title: "Team", href: "#team", id: "team" },
         { title: "Sponsors", href: "#sponsors", id: "sponsors" },
         { title: "About", href: "#about", id: "about" },
     ]);
@@ -28,6 +29,7 @@ const Header = () => {
             { title: m.home(), href: "#home", id: "home" },
             { title: m.donate(), href: "#donate", id: "donate" },
             { title: "FAQ", href: "#faq", id: "faq" },
+            { title: m.our_team().split(/\s/)[1], href: "#team", id: "team" },
             { title: m.sponsors(), href: "#sponsors", id: "sponsors" },
             { title: m.about().split(/\s/)[0], href: "#about", id: "about" },
         ]);
