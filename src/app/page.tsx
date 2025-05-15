@@ -139,7 +139,7 @@ export default function Home() {
               <Button variant="secondary" size="lg">{m.donate()} 💖</Button>
             </a>
             <a href="/pdf/convocatoria.pdf" target="_blank" rel="noopener noreferrer">
-              <Button variant="secondary" size="lg">{m.call()}</Button>
+              <Button variant="secondary" size="lg">{m.call()} 📄</Button>
             </a>
           </div>
         </div>
