@@ -131,17 +131,19 @@ export default function Home() {
         <div className="h-full flex flex-col items-center justify-center px-4">
           {/* Title and Subtitle */}
           <div className="text-white text-center max-w-3xl">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-bold">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold">
               chilangohacks
             </h1>
             <p className="text-base sm:text-lg md:text-xl mt-4 text-balance">
-              📅 {m.month()} 30 - 31 @ 📍{m.location()}
+              📅 {m.month()} 4 - 5 @ 📍{m.location()}
             </p>
           </div>
 
           {/* Button Group */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 text-lg sm:text-xl">
-            <Button className="md:w-auto w-full" size="lg">{m.hero_cta()}</Button>
+            <a href="https://form.typeform.com/to/rT1GnQuh" className="md:w-auto w-full" target="_blank" rel="noopener noreferrer">
+              <Button className="md:w-auto w-full" size="lg">{m.hero_cta()}</Button>
+            </a>
 
             <a href="https://gofund.me/27f7be92" className="md:w-auto w-full" target="_blank" rel="noopener noreferrer">
               <Button className="w-full" variant="secondary" size="lg">
