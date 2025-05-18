@@ -141,7 +141,7 @@ export default function Home() {
 
           {/* Button Group */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 text-lg sm:text-xl">
-            <a href="https://form.typeform.com/to/rT1GnQuh" className="md:w-auto w-full" target="_blank" rel="noopener noreferrer">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScRsIk74hP7p-7XC6032N3oljGQQgLnPdOou-CASbCPYWg5_g/viewform?usp=dialog" className="md:w-auto w-full" target="_blank" rel="noopener noreferrer">
               <Button className="md:w-auto w-full" size="lg">{m.hero_cta()}</Button>
             </a>
 
