@@ -135,7 +135,7 @@ export default function Home() {
               chilangohacks
             </h1>
             <p className="text-base sm:text-lg md:text-xl mt-4 text-balance">
-              📅 {m.month()} 4 - 5 @ 📍{m.location()}
+              📅 {m.month()} 11 - 12 @ 📍{m.location()}
             </p>
           </div>
 
