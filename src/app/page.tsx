@@ -49,6 +49,7 @@ export default function Home() {
       { question: m.what_if_i_dont_know_how_to_code(), answer: m.what_if_i_dont_know_how_to_code_answer() },
       { question: m.can_i_participate_if_im_underage(), answer: m.can_i_participate_if_im_underage_answer() },
       { question: m.what_project_should_i_make(), answer: m.what_project_should_i_make_answer() },
+      { question: m.how_many_people_can_i_have_in_my_team(), answer: m.how_many_people_can_i_have_in_my_team_answer() },
     ]
 
 
@@ -235,7 +236,7 @@ export default function Home() {
           <div className="mt-16 text-center">
             <p className="text-gray-600">
               {m.still_have_questions()}{" "}
-              <a href="#contact" className="text-[#0A2463] font-medium hover:underline">
+              <a href="mailto:contacto@chilangohacks.co" className="text-[#0A2463] font-medium hover:underline">
                 {m.contact_us()}
               </a>
               .
@@ -254,6 +255,25 @@ export default function Home() {
               {m.our_team()}
             </h2>
             <p className="mt-4 text-lg max-w-2xl mx-auto">{m.team_desc()}</p>
+          </div>
+
+          <div className="text-center mb-16">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-accent">
+              {m.join_team()}
+            </h2>
+            <p className="mt-4 text-lg max-w-2xl mx-auto">{m.join_team_desc()}</p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 text-lg sm:text-xl">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCjngrYGQPaKMEYrkdpsDiHuHaSnp0mfRGszaRt3EsT0fQ7A/viewform?usp=header" className="md:w-auto w-full" target="_blank" rel="noopener noreferrer">
+                <Button className="md:w-auto w-full" size="lg">{m.join_team_cta()}</Button>
+              </a>
+
+              <a href="/pdf/convocatoria_staff.pdf" target="_blank" rel="noopener noreferrer">
+                <Button className="md:w-auto w-full" variant="secondary" size="lg">
+                  {m.call()} 📄
+                </Button>
+              </a>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">

@@ -158,6 +158,11 @@ const Footer = () => {
                             FAQ
                         </a>
                     </li>
+                    <li>
+                        <a href="/pdf/codigo_conducta.pdf" className="hover:underline">
+                            {m.code_of_conduct()}
+                        </a>
+                    </li>
                 </ul>
             </div>
         </footer>

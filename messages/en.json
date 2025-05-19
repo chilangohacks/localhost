@@ -64,5 +64,11 @@
   "ivan_role": "Ambassador in Middle School, Spokesperson & Logistics Executive",
   "mariana_role": "Co-Founder, Member of the Inclusion Committee & Organizer",
   "footer_text": "Made with ❤️ in Mexico 🇲🇽",
-  "call": "Call for Participants (Spanish)"
+  "call": "Call for Participants (Spanish)",
+  "how_many_people_can_i_have_in_my_team": "How many people can join my team?",
+  "how_many_people_can_i_have_in_my_team_answer": "You can have a maximum of 4 people in your team. You can also work alone if you prefer.",
+  "join_team": "Do you want to join our team?",
+  "join_team_desc": "We are always looking for passionate individuals to join our team. If you're interested in helping us organize this amazing event",
+  "join_team_cta": "Apply Now",
+  "code_of_conduct": "Code of Conduct"
 }
