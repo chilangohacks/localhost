@@ -143,7 +143,7 @@ export default function Home() {
           {/* Button Group */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 text-lg sm:text-xl">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScRsIk74hP7p-7XC6032N3oljGQQgLnPdOou-CASbCPYWg5_g/viewform?usp=dialog" className="md:w-auto w-full" target="_blank" rel="noopener noreferrer">
-              <Button className="md:w-auto w-full" size="lg">{m.hero_cta()}</Button>
+              <Button className="w-full" size="lg">{m.hero_cta()}</Button>
             </a>
 
             <a href="https://gofund.me/27f7be92" className="md:w-auto w-full" target="_blank" rel="noopener noreferrer">
@@ -153,7 +153,7 @@ export default function Home() {
             </a>
 
             <a href="/pdf/convocatoria.pdf" target="_blank" rel="noopener noreferrer">
-              <Button className="md:w-auto w-full" variant="secondary" size="lg">
+              <Button className="w-full" variant="secondary" size="lg">
                 {m.call()} 📄
               </Button>
             </a>
@@ -265,11 +265,11 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 text-lg sm:text-xl">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCjngrYGQPaKMEYrkdpsDiHuHaSnp0mfRGszaRt3EsT0fQ7A/viewform?usp=header" className="md:w-auto w-full" target="_blank" rel="noopener noreferrer">
-                <Button className="md:w-auto w-full" size="lg">{m.join_team_cta()}</Button>
+                <Button className="w-full" size="lg">{m.join_team_cta()}</Button>
               </a>
 
-              <a href="/pdf/convocatoria_staff.pdf" target="_blank" rel="noopener noreferrer">
-                <Button className="md:w-auto w-full" variant="secondary" size="lg">
+              <a href="/pdf/convocatoria_staff.pdf" target="_blank" rel="noopener noreferrer" className="md:w-auto w-full">
+                <Button className="w-full" variant="secondary" size="lg">
                   {m.call()} 📄
                 </Button>
               </a>
