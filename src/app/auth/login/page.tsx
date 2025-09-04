@@ -34,9 +34,9 @@ export default function LoginPage() {
                 setError("No se pudo enviar el código. Verifica tu correo.")
                 toast.error("No se pudo enviar el código. Verifica tu correo.")
             }
-        } catch (err) {
-            setError("Error de red. Intenta de nuevo.")
-            toast.error("Error de red. Intenta de nuevo.")
+        } catch {
+            setError("Error de red. Intenta de nuevo.");
+            toast.error("Error de red. Intenta de nuevo.");
         } finally {
             setLoading(false)
         }
@@ -59,9 +59,9 @@ export default function LoginPage() {
                 setError("Código incorrecto o expirado.")
                 toast.error("Código incorrecto o expirado.")
             }
-        } catch (err) {
-            setError("Error de red. Intenta de nuevo.")
-            toast.error("Error de red. Intenta de nuevo.")
+        } catch {
+            setError("Error de red. Intenta de nuevo.");
+            toast.error("Error de red. Intenta de nuevo.");
         } finally {
             setLoading(false)
         }
@@ -136,7 +136,7 @@ export default function LoginPage() {
                                 className="w-full border-2 border-[#9dd3e7]/50 p-4 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#1775b0] focus:border-[#1775b0] text-2xl tracking-widest text-center font-mono bg-white/80 hover:bg-white transition-all duration-300 text-[#003468]"
                                 placeholder="000000"
                                 value={otp}
-                                onChange={(e: any) => setOtp(e.target.value)}
+                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setOtp(e.target.value)}
                                 maxLength={6}
                                 required
                             />

@@ -61,7 +61,7 @@ const Header = () => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []);
+    }, [menuItems]);
 
     return (
         <div className="relative w-screen">

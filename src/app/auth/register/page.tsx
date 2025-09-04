@@ -54,7 +54,7 @@ export default function RegisterPage() {
                 setError("No se pudo registrar. Intenta de nuevo.");
                 toast.error("No se pudo registrar. Intenta de nuevo.");
             }
-        } catch (err) {
+        } catch {
             setError("Error de red. Intenta de nuevo.");
             toast.error("Error de red. Intenta de nuevo.");
         } finally {

@@ -1,23 +1,37 @@
-
-
 "use client";
 import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-
-
-const USER_FIELDS = [
-    "name", "email", "github", "phone", "dob", "school", "major", "gradYear", "dietary", "track", "shirtSize", "projectUrl", "historicalCheckIn", "status", "userType", "isBanned", "banReason"
-];
 const REQUIRED_FIELDS = ["name", "email", "phone", "dob", "track", "shirtSize", "gradYear", "school", "major"];
 
-export default function Dashboard() {
-    const [user, setUser] = useState<any>(null);
+type UserType = {
+    name: string;
+    email: string;
+    github?: string;
+    phone: string;
+    dob?: string;
+    school?: string;
+    major?: string;
+    gradYear?: string;
+    dietary?: string;
+    track?: string;
+    shirtSize?: string;
+    projectUrl?: string;
+    historicalCheckIn?: boolean;
+    status?: string;
+    userType?: string;
+    isBanned?: boolean;
+    banReason?: string;
+    [key: string]: string | boolean | undefined;
+};
+
+const DashboardPage = () => {
+    const [user, setUser] = useState<UserType | null>(null);
     const [isAdmin, setIsAdmin] = useState(false);
     const [loading, setLoading] = useState(true);
     const [edit, setEdit] = useState(false);
-    const [form, setForm] = useState<any>({});
+    const [form, setForm] = useState<UserType>({} as UserType);
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
 
@@ -58,18 +72,18 @@ export default function Dashboard() {
             });
     }, []);
 
-    const missingFields = user && REQUIRED_FIELDS.filter((f) => !user[f]);
+    const missingFields = user ? REQUIRED_FIELDS.filter((f) => !user[f]) : [];
 
-    const handleChange = (e: any) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = async (e: any) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setError("");
         setSuccess("");
         // Only allow admins to update userType, status, isBanned, banReason
-        const payload: any = {
+        const payload: Record<string, unknown> = {
             ...form,
             dob: form.dob ? new Date(form.dob).toISOString() : null,
             gradYear: form.gradYear ? new Date(form.gradYear + "-01-01").toISOString() : null,
@@ -187,7 +201,7 @@ export default function Dashboard() {
                                 <Input id="projectUrl" name="projectUrl" value={form.projectUrl} onChange={handleChange} placeholder="URL de proyecto (opcional)" className="w-full border-2 border-[#9dd3e7]/50 p-4 rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#1775b0] focus:border-[#1775b0] text-base bg-white/80 hover:bg-white transition-all duration-300 text-[#003468]" />
                             </div>
                             <div className="flex items-center gap-2">
-                                <input type="checkbox" id="historicalCheckIn" name="historicalCheckIn" checked={!!form.historicalCheckIn} onChange={e => setForm((f: any) => ({ ...f, historicalCheckIn: e.target.checked }))} />
+                                <input type="checkbox" id="historicalCheckIn" name="historicalCheckIn" checked={!!form.historicalCheckIn} onChange={e => setForm((f) => ({ ...f, historicalCheckIn: e.target.checked }))} />
                                 <label htmlFor="historicalCheckIn" className="text-sm font-semibold text-[#003468]">Check-in histórico</label>
                             </div>
                             {isAdmin && (
@@ -209,7 +223,7 @@ export default function Dashboard() {
                                         </select>
                                     </div>
                                     <div className="flex items-center gap-2">
-                                        <input type="checkbox" id="isBanned" name="isBanned" checked={!!form.isBanned} onChange={e => setForm((f: any) => ({ ...f, isBanned: e.target.checked }))} />
+                                        <input type="checkbox" id="isBanned" name="isBanned" checked={!!form.isBanned} onChange={e => setForm((f) => ({ ...f, isBanned: e.target.checked }))} />
                                         <label htmlFor="isBanned" className="text-sm font-semibold text-[#003468]">¿Baneado?</label>
                                     </div>
                                     <div className="space-y-2">
@@ -239,16 +253,16 @@ export default function Dashboard() {
                                     <span className={
                                         "inline-block px-3 py-1 rounded-full text-xs font-semibold " +
                                         (user.track === "OPEN" ? "bg-blue-100 text-blue-700" :
-                                         user.track === "EDUCATION" ? "bg-green-100 text-green-700" :
-                                         user.track === "AI" ? "bg-purple-100 text-purple-700" :
-                                         user.track === "ENVIRONMENT" ? "bg-emerald-100 text-emerald-700" :
-                                         user.track === "BUSINESS" ? "bg-yellow-100 text-yellow-700" : "bg-gray-100 text-gray-700")
+                                            user.track === "EDUCATION" ? "bg-green-100 text-green-700" :
+                                                user.track === "AI" ? "bg-purple-100 text-purple-700" :
+                                                    user.track === "ENVIRONMENT" ? "bg-emerald-100 text-emerald-700" :
+                                                        user.track === "BUSINESS" ? "bg-yellow-100 text-yellow-700" : "bg-gray-100 text-gray-700")
                                     }>
                                         {user.track === "OPEN" ? "Innovación Abierta" :
-                                         user.track === "EDUCATION" ? "Educación" :
-                                         user.track === "AI" ? "Inteligencia Artificial" :
-                                         user.track === "ENVIRONMENT" ? "Medio ambiente" :
-                                         user.track === "BUSINESS" ? "Comercio" : user.track}
+                                            user.track === "EDUCATION" ? "Educación" :
+                                                user.track === "AI" ? "Inteligencia Artificial" :
+                                                    user.track === "ENVIRONMENT" ? "Medio ambiente" :
+                                                        user.track === "BUSINESS" ? "Comercio" : user.track}
                                     </span>
                                 )}</li>
                                 <li><strong>Talla de camiseta:</strong> {user.shirtSize}</li>
@@ -258,12 +272,12 @@ export default function Dashboard() {
                                     <span className={
                                         "inline-block px-3 py-1 rounded-full text-xs font-semibold " +
                                         (user.status === "PENDING" ? "bg-gray-200 text-gray-700" :
-                                         user.status === "ACCEPTED" ? "bg-green-200 text-green-800" :
-                                         user.status === "REJECTED" ? "bg-red-200 text-red-800" : "bg-gray-100 text-gray-700")
+                                            user.status === "ACCEPTED" ? "bg-green-200 text-green-800" :
+                                                user.status === "REJECTED" ? "bg-red-200 text-red-800" : "bg-gray-100 text-gray-700")
                                     }>
                                         {user.status === "PENDING" ? "Pendiente" :
-                                         user.status === "ACCEPTED" ? "Aceptado" :
-                                         user.status === "REJECTED" ? "Rechazado" : user.status}
+                                            user.status === "ACCEPTED" ? "Aceptado" :
+                                                user.status === "REJECTED" ? "Rechazado" : user.status}
                                     </span>
                                 )}</li>
                                 {user.banReason && <li><strong>Razón de baneo:</strong> {user.banReason}</li>}
@@ -283,3 +297,5 @@ export default function Dashboard() {
         </div>
     );
 }
+
+export default DashboardPage;
