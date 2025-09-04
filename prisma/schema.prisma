@@ -1,0 +1,95 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+enum USERTYPE {
+  ADMIN
+  STAFF
+  PARTICIPANT
+}
+
+enum SHIRTSIZE {
+  S
+  M
+  L
+  XL
+}
+
+enum DIETARY {
+  NONE
+  VEGETARIAN
+  VEGAN
+  HALAL
+  KOSHER
+  GLUTEN_FREE
+  OTHER
+}
+
+enum TRACK {
+  OPEN
+  EDUCATION
+  AI
+  ENVIRONMENT
+  BUSINESS
+}
+
+enum STATUS {
+  PENDING
+  ACCEPTED
+  REJECTED
+}
+
+model User {
+  id                String     @id @default(uuid()) @map("_id")
+  email             String     @unique
+  name              String
+  phone             String?
+  github            String?
+  shirtSize         SHIRTSIZE?
+  dob               DateTime?
+  school            String?
+  major             String?
+  gradYear          DateTime?
+  dietary           DIETARY?
+  track             TRACK?
+  historicalCheckIn Boolean    @default(false)
+  status            STATUS     @default(PENDING)
+  projectUrl        String?
+  userType          USERTYPE   @default(PARTICIPANT)
+  createdAt         DateTime   @default(now())
+  updatedAt         DateTime   @updatedAt
+  sessions          Session[]
+  otps              OTP[]
+  isBanned          Boolean    @default(false)
+  banReason         String?
+}
+
+
+model Session {
+  id        String   @id @default(uuid()) @map("_id")
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  ip        String
+  userAgent String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  expiresAt DateTime
+
+  @@index([userId])
+}
+
+model OTP {
+  id        String   @id @default(uuid()) @map("_id")
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  code      String
+  expiresAt DateTime
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}

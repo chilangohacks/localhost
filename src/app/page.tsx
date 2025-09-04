@@ -60,7 +60,7 @@ export default function Home() {
         social: {
           instagram: "https://www.instagram.com/ulisesvina/",
           linkedin: "https://www.linkedin.com/in/ulisesvina/",
-          github: "https://github.com/ulisesvina",
+          github: "ulisesvina",
         },
       },
       juan: {
@@ -68,7 +68,7 @@ export default function Home() {
         role: m.juan_role(),
         social: {
           linkedin: "https://www.linkedin.com/in/scidroid/",
-          github: "https://github.com/scidroid",
+          github: "scidroid",
           instagram: "https://www.instagram.com/scidroid/",
         }
       },
@@ -76,7 +76,7 @@ export default function Home() {
         name: "Sebastian Ponce",
         role: m.sebastian_role(),
         social: {
-          github: "https://github.com/sebaspv",
+          github: "sebaspv",
           linkedin: "https://www.linkedin.com/in/sebaspv/"
         }
       },
@@ -101,7 +101,7 @@ export default function Home() {
         social: {
           instagram: "https://www.instagram.com/astrolemonma.r/",
           linkedin: "https://www.linkedin.com/in/garza-cedillo/",
-          github: "https://github.com/astrolemonmarafk",
+          github: "astrolemonmarafk",
         }
       },
     }
@@ -136,7 +136,7 @@ export default function Home() {
               chilangohacks
             </h1>
             <p className="text-base sm:text-lg md:text-xl mt-4 text-balance">
-              📅 {m.month()} 11 - 12 @ 📍{m.location()}
+              📅 {m.month()} 7 - 9 @ 📍{m.location()}
             </p>
           </div>
 

@@ -1,32 +1,22 @@
-interface TextInputProps {
-  label: string;
-  name: string;
-  value: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  className?: string;
-  placeholder?: string;
-  password?: boolean;
-}
+import * as React from "react"
 
-const TextInput: React.FC<TextInputProps> = (props) => {
-  const { label, name, value, onChange, className, placeholder, password } = props;
+import { cn } from "@/lib/utils"
 
-  return (
-    <div className={`flex flex-col space-y-1 ${className}`}>
-      <label htmlFor={name} className="text-gray-800 dark:text-gray-200">
-        {label}
-      </label>
+const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
+  ({ className, type, ...props }, ref) => {
+    return (
       <input
-        id={name}
-        name={name}
-        value={value}
-        onChange={onChange}
-        className="border-2 border-gray-300 dark:border-gray-700 bg-white dark:bg-black text-black dark:text-white p-3 rounded-md w-full my-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
-        placeholder={placeholder}
-        type={password ? "password" : "text"}
+        type={type}
+        className={cn(
+          "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+          className
+        )}
+        ref={ref}
+        {...props}
       />
-    </div>
-  );
-};
+    )
+  }
+)
+Input.displayName = "Input"
 
-export { TextInput };
+export { Input }
