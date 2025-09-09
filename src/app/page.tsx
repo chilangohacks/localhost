@@ -62,34 +62,6 @@ export default function Home() {
           github: "ulisesvina",
         },
       },
-      juan: {
-        name: "Juan Almanza",
-        role: m.juan_role(),
-        social: {
-          linkedin: "https://www.linkedin.com/in/scidroid/",
-          github: "scidroid",
-          instagram: "https://www.instagram.com/scidroid/",
-        }
-      },
-      sebastian: {
-        name: "Sebastian Ponce",
-        role: m.sebastian_role(),
-        social: {
-          github: "sebaspv",
-          linkedin: "https://www.linkedin.com/in/sebaspv/"
-        }
-      },
-      elohim: {
-        name: "Elohim Hernández",
-        role: m.elohim_role(),
-      },
-      bruno: {
-        name: "Bruno Ramírez",
-        role: m.bruno_role(),
-        social: {
-          instagram: "https://www.instagram.com/brunooosf/"
-        }
-      },
       ivan: {
         name: "Ivan Espinola",
         role: m.ivan_role(),
@@ -103,6 +75,13 @@ export default function Home() {
           github: "astrolemonmarafk",
         }
       },
+      ximena: {
+        name: "Ximena Hernández",
+        role: m.ximena_role(),
+        social: {
+          instagram: "https://www.instagram.com/_xime_hr/",
+        }
+      }
     }
 
     setFaqData(fetchedFAQ)
@@ -263,11 +242,11 @@ export default function Home() {
             <p className="mt-4 text-lg max-w-2xl mx-auto">{m.join_team_desc()}</p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 text-lg sm:text-xl">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCjngrYGQPaKMEYrkdpsDiHuHaSnp0mfRGszaRt3EsT0fQ7A/viewform?usp=header" className="md:w-auto w-full" target="_blank" rel="noopener noreferrer">
+              <a href="https://chilangohacks.co/auth/register" className="md:w-auto w-full" target="_blank" rel="noopener noreferrer">
                 <Button className="w-full" size="lg">{m.join_team_cta()}</Button>
               </a>
 
-              <a href="/pdf/convocatoria_staff.pdf" target="_blank" rel="noopener noreferrer" className="md:w-auto w-full">
+              <a href="/pdf/convocatoria.pdf" target="_blank" rel="noopener noreferrer" className="md:w-auto w-full">
                 <Button className="w-full" variant="secondary" size="lg">
                   {m.call()} 📄
                 </Button>
@@ -276,7 +255,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
-            {["ulises", "mariana", "sebastian", "juan", "ivan", "elohim", "bruno"].map((member, i) => (
+            {["ulises", "mariana", "ximena", "ivan"].map((member, i) => (
               <motion.div
                 key={i}
                 className="group"

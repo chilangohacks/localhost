@@ -55,14 +55,9 @@
   "contact_description": "Have questions? Reach out to us at support@chilangohacks.co",
   "our_team": "Our Team",
   "team_desc": "We are a group of passionate individuals dedicated to making this hackathon a success. Meet the team behind ChilangoHacks.",
-  "ulises_role": "Co-Founder & Organizer",
-  "juan_role": "Ambassador in Colombia",
-  "sebastian_role": "Ambassador in Puebla & Director of AI Innovation",
-  "jafit_role": "Ambassador in High School, Inclusion Committee Lead & Finance Executive",
-  "elohim_role": "Logistics and Operations",
-  "bruno_role": "Ambassador in University",
-  "ivan_role": "Ambassador in Middle School, Spokesperson & Logistics Executive",
-  "mariana_role": "Co-Founder, Member of the Inclusion Committee & Organizer",
+  "ulises_role": "Lead Organizer & Co-Founder",
+  "ivan_role": "Logistics Executive",
+  "mariana_role": "Member of the Inclusion Committee & Co-Founder",
   "footer_text": "Made with ❤️ in Mexico 🇲🇽",
   "call": "Call for Participants (Spanish)",
   "how_many_people_can_i_have_in_my_team": "How many people can join my team?",
@@ -70,5 +65,6 @@
   "join_team": "Do you want to join our team?",
   "join_team_desc": "We are always looking for passionate individuals to join our team. If you're interested in helping us organize this amazing event",
   "join_team_cta": "Apply Now",
-  "code_of_conduct": "Code of Conduct"
+  "code_of_conduct": "Code of Conduct",
+  "ximena_role": "Lead Organizer & Co-Founder"
 }

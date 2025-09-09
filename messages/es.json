@@ -54,14 +54,9 @@
   "contact_title": "Contáctanos",
   "our_team": "Nuestro equipo",
   "team_desc": "Detrás de un grán hackatón, hay un gran equipo. Conoce al equipo de ChilangoHacks, un grupo de jóvenes apasionados por la tecnología y la innovación.",
-  "ulises_role": "Co-Fundador & Director de Organización",
-  "juan_role": "Embajador en Colombia",
-  "sebastian_role": "Embajador en Puebla & Director en Innovación con IA",
-  "jafit_role": "Embajadora en Bachillerato, Directora de la Comisión de Inclusión & Ejecutiva en Finanzas",
-  "mariana_role": "Co-Fundadora, Organizadora & Miembro de la Comisión de Inclusión",
-  "elohim_role": "Logística y Operaciones",
-  "bruno_role": "Embajador en Licenciatura",
-  "ivan_role": "Embajador en Secundaria, Vocero & Ejecutivo en Logística",
+  "ulises_role": "Secretario General & Co-Fundador",
+  "mariana_role": "Miembro de la Comisión de Inclusión & Co-Fundadora",
+  "ivan_role": "Ejecutivo en Logística",
   "footer_text": "Hecho con ❤️ en México 🇲🇽",
   "call": "Convocatoria",
   "how_many_people_can_i_have_in_my_team": "¿Cuántas personas pueden unirse a mi equipo?",
@@ -69,5 +64,6 @@
   "join_team": "¿Quieres unirte al Comité Organizador?",
   "join_team_desc": "¡Estamos buscando personas apasionadas por la tecnología y la innovación para unirse a nuestro equipo! Si estás interesado en ser parte de la organización de ChilangoHacks, completa el formulario a continuación y nos pondremos en contacto contigo.",
   "join_team_cta": "Únete al equipo",
-  "code_of_conduct": "Código de Conducta"
+  "code_of_conduct": "Código de Conducta",
+  "ximena_role": "Secretaria General Adjunta & Co-Fundadora"
 }
